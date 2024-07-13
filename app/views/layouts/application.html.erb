@@ -13,15 +13,20 @@
 
   <body>
     <header>
+      <h3>Bookers</h3>
     <% if user_signed_in? %>
-      <li>
-        <i class="fa-solid fa-house"></i>
-        <%= link_to "Home",home_top_path %>
-      </li>
-    <% else %>
       <li>
         <i class="fa-solid fa-right-from-bracket"></i>
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      </li>
+    <% else %>
+      <li>
+        <i class="fa-solid fa-house"></i>
+        <%= link_to "Home" %>
+      </li>
+      <li>
+        <i class="fa-solid fa-link"></i>
+        <%= link_to "About" %>
       </li>
       <li>
         <i class="fa-solid fa-user-plus"></i>
