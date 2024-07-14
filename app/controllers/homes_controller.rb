@@ -3,7 +3,8 @@ class HomesController < ApplicationController
      new_user_session_path
   end
   
-  def after_sign_in_path_for(resource)
-    about_path
+  def about
+    
   end
+
 end
