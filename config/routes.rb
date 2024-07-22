@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  devise_for :users
   
   resources :post_images, only: [:new, :index, :show, :edit]
   resources :books, only: [:new, :index, :show, :edit]
@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   post 'books' => 'books#create'
   get 'books' => 'books#index'
   
-  devise_for :users
   root to: 'homes#top'
 
 end
