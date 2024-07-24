@@ -35,7 +35,7 @@
     </div>
   <% end %>
   </div>
-<% @books.each do |list| %>
+<% @books.each do |book| %>
 
 
   <p>タイトル</p>
@@ -43,6 +43,7 @@
     <%=link_to book.title, book_path(book.id) %>
   </span>
   
-  <p>画像</p>
-  <%= image_tag book.image, size: "200x200" %>
+  <span>
+    <%=link_to book.title, book_path(book.id) %>
+  </span>
 <% end %>
