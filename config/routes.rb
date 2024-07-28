@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  resources :post_images, only: [:new, :index, :show, :edit]
+  resources :post_images, only: [:new, :index, :show, :edit, :destroy]
   resources :books, only: [:new, :index, :show, :edit, :destroy]
   resources :users, only: [:new, :index, :show, :edit]
   
