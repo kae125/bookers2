@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :index, :show, :edit, :update]
   
   get 'homes/top'
-  get 'homes/about' => 'homes#about', as: 'about'
+  get 'home/about' => 'homes#about', as: 'about'
   post 'books' => 'books#create'
   get 'books' => 'books#index'
   patch 'books/:id' => 'books#update', as: 'update_book'
