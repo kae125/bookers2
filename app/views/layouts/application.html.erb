@@ -35,13 +35,19 @@
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Users', users_path, class: 'nav-link text-white' %>
+              <%= link_to users_path, class: 'nav-link text-white' do %>
+              <i class="fa-solid fa-users"></i> Users
+              <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Books', books_path, class: 'nav-link text-white' %>
+              <%= link_to books_path, class: 'nav-link text-white' do %>
+              <i class="fa-solid fa-book-open"></i> Books
+              <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-white' %>
+              <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-white' do %>
+              <i class="fa-solid fa-right-from-bracket"></i> Log out
+              <% end %>
             </li>
             <% else %>
              <li class="nav-item">
