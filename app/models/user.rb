@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_one_attached :profile_image
   
   validates :password, confirmation: true
-validates :password_confirmation, presence: true  
+  validates :password_confirmation, presence: true  
   
   def get_profile_image(width, height)
     unless profile_image.attached?

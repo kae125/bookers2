@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   end
   
   def create
+    @user = current_user
     @book = Book.new(book_params)
    if @book.save
       flash[:notice] = "Book was successfully created."
