@@ -9,6 +9,12 @@ class UsersController < ApplicationController
   def show
     @book = Book.new
     @user = User.find(params[:id])
+    if @user.save
+      flash[:notice] = "WWelcome! You have signed up successfully."
+      redirect_to user_path(@user.id)
+    else
+     @users = User.all
+    end
   end
   
   def edit
