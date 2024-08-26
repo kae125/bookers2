@@ -9,12 +9,6 @@ class UsersController < ApplicationController
   def show
     @book = Book.new
     @user = User.find(params[:id])
-    if @user.save
-      flash[:notice] = "Welcome! You have signed up successfully."
-      redirect_to user_path(@user.id)
-    else
-     @users = User.all
-    end
   end
   
   def edit
@@ -23,7 +17,7 @@ class UsersController < ApplicationController
   
   def update
      @user = User.find(params[:id])
-     @user.update(user_params)
+     @user.update!(user_params)
       flash[:notice] = "You have updated user successfully."
       redirect_to user_path(@user.id)
   end
