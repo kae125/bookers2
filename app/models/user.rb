@@ -17,8 +17,4 @@ class User < ApplicationRecord
     end
     profile_image.variant(resize_to_limit: [width, height]).processed
   end
-  
-  # def get_profile_image
-  #   (profile_image.attached?) ? profile_image : 'no_image.jpg'
-  # end
 end
